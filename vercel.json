@@ -1,5 +1,5 @@
 {
-  "buildCommand": "bun install && bun --filter client run build",
+  "buildCommand": "cd packages/client && bun run build",
   "outputDirectory": "packages/client/dist",
   "installCommand": "bun install",
   "framework": null,
