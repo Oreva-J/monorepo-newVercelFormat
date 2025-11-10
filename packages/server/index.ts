@@ -1,3 +1,4 @@
+// packages/server/index.ts
 import express from 'express';
 import cors from 'cors';
 
@@ -21,8 +22,8 @@ app.get('/api/users', (req, res) => {
 // For Vercel - export the app
 export default app;
 
-// For local development - start server
-if (import.meta.env?.MODE !== 'production') {
+// For local development - start server only if not in Vercel environment
+if (!process.env.VERCEL) {
   app.listen(port, () => {
     console.log(`🚀 Server running on http://localhost:${port}`);
   });
