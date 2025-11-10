@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "bun run index.ts",
-    "build": "bun --filter client run build",
+    "build": "cd packages/client && bun run build",
     "preview": "cd packages/client && bun run preview"
   },
   "dependencies": {
