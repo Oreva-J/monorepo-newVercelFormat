@@ -1,12 +1,12 @@
 {
-  "buildCommand": "bun run build",
+  "buildCommand": "bun install && bun --filter client run build",
   "outputDirectory": "packages/client/dist",
   "installCommand": "bun install",
   "framework": null,
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "/api/index"
+      "destination": "/api"
     }
   ]
 }
