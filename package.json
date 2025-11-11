@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "dev": "bun run index.ts",
-    "build": "cd packages/client && bun run build && cd ../.. && cp -r packages/client/dist ./dist",
-    "preview": "cd packages/client && bun run preview"
+    "build": "bun run --filter client build",
+    "build:all": "bun run --filter client build && bun run --filter server build"
   },
   "dependencies": {
     "concurrently": "^9.2.1"
